@@ -17,5 +17,12 @@ class CockroachTest(unittest.TestCase):
         self.assertEqual(self.cockroach.squish(0), "quick little bugger")
         self.assertEqual(self.cockroach.squish(1), 'WE GOT IT')
 
+    def test_jump(self):
+        self.assertEqual(self.cockroach.jump(1), '*boing*')
+        self.assertEqual(self.cockroach.jump(3), '*boing* *boing* *boing*')
+
+    def test_reproduce(self):
+        self.assertEqual(self.cockroach.reproduce(), Cockroach())
+
 if __name__ == '__main__':
     unittest.main()
