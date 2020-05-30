@@ -10,3 +10,12 @@ class Cockroach:
             return 'RUN AWAY FROM IT!'
         else:
             return 'SOMEONE SWAT IT!'
+
+    def squish(self, chance):
+        if self.size > 3:
+            return 'how did it not die'
+        else:
+            if chance == 0:
+                return 'quick little bugger'
+            else:
+                return 'WE GOT IT'
