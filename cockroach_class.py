@@ -19,3 +19,10 @@ class Cockroach:
                 return 'quick little bugger'
             else:
                 return 'WE GOT IT'
+
+    def jump(self, no_times):
+        jumping = ''
+        for i in range(no_times):
+            jumping += '*boing* '
+
+        return jumping.strip()
