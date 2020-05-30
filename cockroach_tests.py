@@ -24,5 +24,6 @@ class CockroachTest(unittest.TestCase):
     def test_reproduce(self):
         self.assertEqual(self.cockroach.reproduce(), Cockroach())
 
+
 if __name__ == '__main__':
     unittest.main()
