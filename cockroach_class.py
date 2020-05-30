@@ -4,6 +4,7 @@ class Cockroach:
         self.colour = colour
         self.wings = wings
         self.species = species
+        self.status = status
 
     def fly(self):
         if self.size > 3:
@@ -18,6 +19,7 @@ class Cockroach:
             if chance == 0:
                 return 'quick little bugger'
             else:
+                self.status = 'Dead'
                 return 'WE GOT IT'
 
     def jump(self, no_times):
@@ -26,3 +28,6 @@ class Cockroach:
             jumping += '*boing* '
 
         return jumping.strip()
+
+    def reproduce(self):
+        return Cockroach((self.size//2)+1, self.colour, self.wings, self.species, 'Alive')

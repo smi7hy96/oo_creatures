@@ -4,7 +4,7 @@ from cockroach_class import *
 
 class CockroachTest(unittest.TestCase):
     def setUp(self):
-        self.cockroach = Cockroach(5, 'black', True, 'american', 'alive')
+        self.cockroach = Cockroach(5, 'black', True, 'american', 'Alive')
 
     def test_fly(self):
         self.assertEqual(self.cockroach.fly(), 'RUN AWAY FROM IT!')
@@ -22,7 +22,7 @@ class CockroachTest(unittest.TestCase):
         self.assertEqual(self.cockroach.jump(3), '*boing* *boing* *boing*')
 
     def test_reproduce(self):
-        self.assertEqual(self.cockroach.reproduce(), Cockroach())
+        assert isinstance(self.cockroach.reproduce(), Cockroach)
 
 
 if __name__ == '__main__':
